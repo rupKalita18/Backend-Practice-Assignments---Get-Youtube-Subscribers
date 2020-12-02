@@ -24,9 +24,8 @@ app.get("/subscribers/:id", (req, res) => {
     .then((result) => {
       res.send(result);
     })
-    .catch((err) => {
-      res.status(400).send({ message: error.message });
-    });
+    .catch((error) => res.status(400).send({ message: error.message }));
+
   // if(subscribers===undefined)
   // {
   //     res.status(400).send({message: error.message});
